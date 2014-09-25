@@ -1,0 +1,22 @@
+{
+  "name": "hapi-upload",
+  "version": "0.0.1",
+  "description": "Demonstração de upload com o Hapijs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/alanhoff/tutorial-hapijs-upload"
+  },
+  "author": "Alan Hoffmeister <alanhoffmeister@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alanhoff/tutorial-hapijs-upload/issues"
+  },
+  "homepage": "https://github.com/alanhoff/tutorial-hapijs-upload",
+  "dependencies": {
+    "hapi": "^6.9.0"
+  }
+}

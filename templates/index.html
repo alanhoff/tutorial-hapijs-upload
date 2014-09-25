@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Teste de upload</title>
+  </head>
+  <body>
+    <h2>Upload</h2>
+    <form action="/upload" enctype="multipart/form-data" method="POST">
+      <label>Múltiplos arquivos:</label><input type="file" name="arquivos_multiplos" multiple><br>
+      <label>Um arquivo:</label><input type="file" name="arquivo" multiple><br>
+      <label>Nome:</label> <input type="text" name="nome"><br>
+      <label>E-mail:</label><input type="text" name="email"><br>
+      <input type="submit" value="Enviar formulário">
+    </form>
+  </body>
+</html>
