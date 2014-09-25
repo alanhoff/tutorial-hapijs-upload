@@ -27,7 +27,7 @@ server.route({
 
     handler: function(request, reply) {
 
-      // Respondemos com os mesmos dados que recebemos do brawser
+      // Respondemos com os mesmos dados que recebemos do browser
       var data = request.payload;
       reply(data);
     }
