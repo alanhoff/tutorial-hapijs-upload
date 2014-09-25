@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "hapi-upload",
   "version": "0.0.1",
   "description": "Demonstração de upload com o Hapijs",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/alanhoff/tutorial-hapijs-upload",
   "dependencies": {
-    "hapi": "^6.9.0"
+    "hapi": "^6.9.0",
+    "mime": "^1.2.11"
   }
 }

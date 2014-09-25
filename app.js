@@ -1,4 +1,4 @@
-var Hapi = require('hapi');
+﻿var Hapi = require('hapi');
 
 var server = new Hapi.Server(8080);
 
@@ -27,9 +27,19 @@ server.route({
 
     handler: function(request, reply) {
 
-      // Respondemos com os mesmos dados que recebemos do browser
+      // Salvamos o arquivo novo usando o nome como o email.
       var data = request.payload;
-      reply(data);
+      var mime = require('mime');
+
+      ext = mime.extension(data.file.headers['content-type']);
+    
+      filename = data.email+'.'+ext;
+    
+      fs.rename(data.file.path, __dirname + '/../upload/'+filename, function(){
+    	  //destruimos o arquivo temporario
+        fs.unlink(data.file.path);
+    	  res({statusCode: 200, error: null, message: "Upload Complete"});
+      });
     }
   }
 });
