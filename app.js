@@ -31,15 +31,15 @@ server.route({
       var data = request.payload;
       var mime = require('mime');
 
-	  ext = mime.extension(data.file.headers['content-type']);
-
-	  filename = data.email+'.'+ext;
-
-	  fs.rename(data.file.path, __dirname + '/../upload/'+filename, function(){
-		//destruimos o arquivo temporario
-	    fs.unlink(data.file.path);
-		res({statusCode: 200, error: null, message: "Upload Complete"});
-	  });
+      ext = mime.extension(data.file.headers['content-type']);
+    
+      filename = data.email+'.'+ext;
+    
+      fs.rename(data.file.path, __dirname + '/../upload/'+filename, function(){
+    	  //destruimos o arquivo temporario
+        fs.unlink(data.file.path);
+    	  res({statusCode: 200, error: null, message: "Upload Complete"});
+      });
     }
   }
 });
